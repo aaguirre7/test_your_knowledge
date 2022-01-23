@@ -3,30 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Code Quiz</title>
+    <script src="assets/js/qs_quiz.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
-
-<body>
-    <!-- Link to highscores -->
-    <a href="HighScores.html">View Highscores</a>
-    <!-- This is a wrapper -->
-    <div id="wrapper">
-        <!-- Div for timer -->
-        <div id="currentTime"></div>
-        <!-- Div for quiz content -->
-        <div id="questionsDiv">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
-                answers
-                will penalize your score/time by ten seconds!</p>
-            <ul id="choicesUl"></ul>
-            <!-- Buttons -->
-            <button id="startTime">Start Quiz</button>
+<!-- Header with link for High Scores and the timer-->
+<body> 
+    <div id="controls">
+        <div id="info">
+        <button id="scores" href="">View High Scores</button>
+        <div id="timer"><p>Time: <span id="time">0</span></p></div>
         </div>
     </div>
-    <script src="assets/js/script.js"></script>
+    <div id="positionWrapper">
+        <section id="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+        </p>
+        <button>Start Quiz</button>
+        </section>
+    
+        <section id="quizHolder" class="hide">
+        <p id="title"></p>
+        <!-- Buttons to accept question values-->
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <div id="scoreIndicator" class="invisible">
+            <p>&nbsp;</p>
+        </div>
+        </section>
+
+        <section id="finish" class="hide">
+        <h1>All Done</h1>
+        <p>Your final score is&nbsp;<span id="score"></span>%</p>
+        <div id="records">
+            <p>Enter initials: </p><input id="initials" type="text"> <button>Submit</button>
+        </div>
+        <div id="errorIndicator" class="invisible">
+            <p>&nbsp;</p>
+        </div>
+        </section>
+    
+        <section id="highScores" class="hide">
+        <h1>High Scores</h1>
+        <div>
+            <!--space for highscores-->
+        </div>
+        <button id="reset">Go Back</button> <button id="clearScores">Clear Highscores</button>
+        </section>
+    </div>
 </body>
 </html>
